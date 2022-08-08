@@ -1,20 +1,20 @@
 # Time-Series-Analysis-of-Climate-Change-using-ARIMA-Model
 This project is a visualization of climate change over the years and prediction model for predicting the future climate value. The project is based on python and machine learning. The dataset used here is BEST(Berkeley's Earth Surface Temperature) dataset
 
-Chapter 01: INTRODUCTION
+# Chapter 01: INTRODUCTION
 
-1.1	Introduction
+# 1.1	Introduction
 In this part we will be gaining some insights into the topic-Time Series Analysis of Climate Change. The temperature at the Earth’s surface is counted as one of the most important environmental factors among all those factors that affect climate in a different way. Hence, modeling the variation of temperature and making dependable forecasts helps us to visualize the climatic conditions in a better manner. The temporal changes of the global surface temperature allow the environmental researchers to communicate smoothly. Temperature affects all the other factors affecting the climate; therefore, it is very essential to study the temperature patterns and trends in order to align with other factors and trends in the environment. 
 Generally, a structural time series data model decomposes into trend, seasonality, and residuals in trend components. A time series mathematically can be defined as 
 xk = ak + bk + rk
 where xk is the resulting time series, ak is a trend component, bk is a seasonal (periodic) component, and rk is a residual component that is often a stochastic time series signal.
 
 
-What is Climate Change?
+# What is Climate Change?
 Climate change, in general, refers to a long-term shift in temperature and weather patterns. The reasons for shifting might differ from a natural effect, human activities, or even the differences in the solar cycle [1].
 
 
-Why Time Series?
+# Why Time Series?
 A time series is a set of repeated measurements of the same phenomenon, taken sequentially over time. 
 Time series forecasting is a technique for the prediction of events through a sequence of time. It predicts future events by analyzing the trends of the past, on the assumption that future trends will hold similar to historical trends. 
 Time Series analysis is a method of analyzing the data in order to extract more and more meaningful insights and statistics during a time period.
@@ -45,17 +45,17 @@ Figure 1: Countries with Highest Average Temperature
  
 Figure 2: Countries with Highest Average Temperature Difference
 
-1.2	Objective 
+# 1.2	Objective 
 The main objectives of designing this project are mentioned below:
 i. To study the trends followed by the temperature factors of climate
 ii. To predict the future values for temperature using the seasonal ARIMA model.
 iii. To find the most appropriate ARIMA model for our dataset in order to increase the efficiency of predicting the less erotic future values.
 
-1.3	Motivation 
+# 1.3	Motivation 
 Climate impacts are already more widespread and severe than expected. We are locked into even worse impacts from climate change in the near term. Risks will escalate quickly with higher temperatures, often causing irreversible impacts of climate change.
 We want to gain more and more knowledge about why and what affects the climate. Therefore, to achieve these goals, we want to investigate temperature changes and use these insights to predict future temperatures using ARIMA models. Also, we will examine the mathematical background of the various ARIMA models to see if we can make changes to the formula.
 
-1.4	Language Used
+# 1.4	Language Used
 
 The whole project is based on the python language. Python is an interpreted, high-level, general-purpose programming language developed by Guido Van Rossum and initially released in 1991. ! We have imported a few libraries at different stages of our project. These python libraries are very useful and made analysis and visualizing the data much easier.
 
@@ -74,36 +74,17 @@ statsmodels is a Python module that provides classes and functions for the estim
 pmdarima:
 pmdarima is a python package used to implement the ARIMA model and helps to identify the best model for your dataset while providing you the order of time series i.e. the values for p,d,q. It helps us to find the most accurate model with the least AIC value and return a fitted ARIMA model.
 
-1.5	Technical Requirements (Hardware)
-●	Intel Pentium 4 or later SSE2 capable processor.
-●	4GB of RAM as the dataset used is not a bulky one and won’t use many resources.
-●	GPU for graphical representations.
-●	Dual XGA (1024 x 768) or higher resolution monitors.
-●	Windows Operating system.
-
 1.6	Deliverables/Outcomes
 Designing the time series forecasting model and using the techniques of prediction in order to predict future values influenced by past values. We finally would have a model that will predict the future average temperature for the land for few of the countries including India. The outcomes of the forecasting model shall be visualized and displayed.
 
  
-Chapter 02: Feasibility Study, Requirements Analysis, and Design
-
-2.1	Feasibility Study
-The objective of this part is to offer an insight into the works and efforts that have previously been done in the Time Series Analysis of climate change. Climate change has been a significant and heated issue for some years now owing to increased changes in weather conditions.
-Time series data is a form of data that consists of a single real value drawn from a regular time interval. Time-series data analysis is widely utilized in weather and climate forecasting, as well as financial and marketing planning [7].
-The time-series data are useful in analyzing and designing a prediction model. Association Rule Mining may find important association relations that occur with certain temporal events, like climatic variability, by utilizing time-series data. [8] Using the Association Rule Mining and clustering technique to identify hidden rules in time series climate data and examine the relationships between the identified rules. The weather data used in [8] was collected from Selangor's Petaling Jaya observation station dataset ranging from 2013 to 2015. The designed framework suggested how ARM may be used to uncover significant patterns in climate data and produce rules for building a prediction model [8].
-In [9] authors cover an assessment of time series and seasonal analysis of monthly mean minimum and maximum temperatures, as well as precipitation, for the Bhagirathi river basin in the Indian state of Uttarakhand.  The data ranged from 1901 to 2000. (100 years). Forecasting for the next 20 years (2001–2020) was done using the seasonal ARIMA (SARIMA) model. (ARIMA) model is based on the Box Jenkins technique, which anticipates future trends by keeping data stable and eliminating seasonality. SARIMA was shown to be the best model for time series analysis of precipitation data. The model prediction results reveal that the projected data matched the data trend nicely.
-Authors in [10], introduced a semi-supervised learning framework based on Hidden Markov Model Regression for long-term time series forecasting To address the issue of discrepancies between historical and model simulation data, a covariance alignment approach is created. They tested their method on data sets from several sectors, including climate modeling. The test results reveal that the methodology outperforms alternative supervised learning approaches for long-term time series forecasting.
-In [11], to tackle the change detection problem with the fewest restrictive assumptions, the authors used the Bounded-variation clustering approach. The pattern of variations in the Pacific Decadal Oscillation for 1900–2013 and the piecewise linear trend of US temperature from period 1900 until 2013 was taken as the datasets. The Bayesian information criteria are used to determine the optimal number of change points.
-The multi-channel singular spectrum analysis (MSSA) is used by authors in [12] which uses the matrix of the extended series of original data. We look at a dataset of monthly mean pressure data from the North Pacific Ocean at sea level. The techniques of independent component analysis (ICA) and principal component analysis (PCA) are implemented by the authors.
-Authors used Sequential Association Rules from Time Series (SART) in [13], SART is a technique for mining association rules in temporal series that uses an overlapping sliding-window app to maintain time information between related occurrences. Experiments were carried out using genuine data from climate sensors. When compared to traditional sequential mining, the findings demonstrated that the suggested technique enhances the number of mined patterns, exposing connected events that occur across time. The approach also adds semantic information to the mined patterns, such as confidence and time.
-In [14] authors introduce a novel technique for mining association patterns in geo-referenced climate and satellite picture collections. The CLEARMiner (CLimatE Association patteRns Miner) algorithm recognizes patterns in time series and links them with patterns in other time series within a temporal sliding window. Experiments were carried out using synthetic and real-world climatic data. The rules developed by our new algorithm reveal the association patterns in distinct time periods in each time series, indicating a temporal delay between the occurrences of patterns in the series investigated, validating what professionals normally anticipate when working with multiple data charts.
-2.2 	E-R Diagram / Data-Flow Diagram (DFD)
+# 2. E-R Diagram / Data-Flow Diagram (DFD)
  
 
 Figure 3: Data Flow Chart
-Chapter 03: IMPLEMENTATION
+# Chapter 03: IMPLEMENTATION
 
-3.1	Date Set Used
+# 3.1	Date Set Used
 Berkeley’s Earth Surface Temperature (BEST) [4] dataset is used for this project. The dataset contains a total of 1.6 billion temperature values [5]. The dataset gets updated from time to time. The dataset has already eliminated repeated records. The dataset contains majorly 5 sub-datasets namely:
 1.	GlobalTemperaturesByCity
 2.	GlobalLandTemperaturesByCountry
@@ -129,12 +110,12 @@ In GlobalLandTemperaturesByCountry, there are four attributes namely, ‘dt’ (
 (NOTE: The uncertainty attributes are describing the statistical uncertainty calculation in the current averaging process intended to capture the portion of uncertainty introduced into due to the noise and other factors that may prevent the basic data from being an accurate reflection of the climate at the measurement site) [16].
 
 
-3.3 	Design of Problem Statement
+# 3.3 	Design of Problem Statement
 
 The aim of this project is to predict future temperature values from the past recorded average temperature values and to analyze different meaningful insights from the time series dataset. In order to reach this goal, we will use ARIMA (the most used time series model to predict and analyze the land temperature of Berkeley’s Earth surface temperature dataset.
 
 
-3.4 Algorithm / Pseudocode of the Project Problem
+# 3.4 Algorithm / Pseudocode of the Project Problem
 
 1.	Firstly, we need to do data cleaning. Our data was nearly clean; we just filled the NaN values with the last recorded values of temperature in the respective columns.   
 2.	After that, we have visualized our data on various parameters and found out interesting insights about our dataset.
@@ -144,7 +125,7 @@ The aim of this project is to predict future temperature values from the past re
 6.	Calculate the accuracy.
 7.	And finally forecast your choice of Average temperature values.
 
-3.5 Flow graph of the Minor Project Problem
+# 3.5 Flow graph of the Minor Project Problem
  
 
 Figure 4: Working of ARIMA Model
@@ -159,7 +140,7 @@ The parameters of the ARIMA model are defined as follows:
 ●	q: The size of the moving average window, also called the order of moving average. [6]
 When adopting the ARIMA model over time, the underlying process that generated the observations is assumed to be the ARIMA process. This may seem obvious, but it helps motivate the need to confirm model assumptions with raw observations and residual errors in the model's predictions.
 
-3.6   Screenshots of the various stages of Project
+# 3.6   Screenshots of the various stages of Project
 1.	Let’s plot the specified dataset first.     
  
 Figure 5: The plot of Average Temperatures And the uncertainty of all countries
@@ -261,7 +242,7 @@ Figure 15: Fitting model
 
 
  
-Chapter 04: RESULTS
+# Chapter 04: RESULTS
 
 4.1	Discussion on the Results Achieved
 The forecasting model has successfully been able to predict the future values for the land temperature. We found that overall countries' data is stationary but when we analyzed the patterns of the country India, we found that the data was not stationary and hence needed to be made stationary before implementing the ARIMA model. 
@@ -285,7 +266,7 @@ No model can be perfect after getting practically implemented in the first attem
 We now have the predicted temperature values, and we look forward to analyzing the other factors affecting climate while keeping the temperature factor in mind. We also look forward to giving this model an appropriate interface to show its work more clearly.
 
 
-References
+# References
 1.	https://www.un.org/en/climatechange/what-is-climate-change
 2.	https://towardsdatascience.com/time-series-analysis-and-climate-change-7bb4371021e
 3.	https://towardsdatascience.com/time-series-models-d9266f8ac7b0
