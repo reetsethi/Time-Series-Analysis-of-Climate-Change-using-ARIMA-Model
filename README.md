@@ -77,12 +77,9 @@ pmdarima is a python package used to implement the ARIMA model and helps to iden
 1.6	Deliverables/Outcomes
 Designing the time series forecasting model and using the techniques of prediction in order to predict future values influenced by past values. We finally would have a model that will predict the future average temperature for the land for few of the countries including India. The outcomes of the forecasting model shall be visualized and displayed.
 
- 
-# 2. E-R Diagram / Data-Flow Diagram (DFD)
- 
 
 Figure 3: Data Flow Chart
-# Chapter 03: IMPLEMENTATION
+# Chapter 02: IMPLEMENTATION
 
 # 3.1	Date Set Used
 Berkeley’s Earth Surface Temperature (BEST) [4] dataset is used for this project. The dataset contains a total of 1.6 billion temperature values [5]. The dataset gets updated from time to time. The dataset has already eliminated repeated records. The dataset contains majorly 5 sub-datasets namely:
@@ -242,7 +239,7 @@ Figure 15: Fitting model
 
 
  
-# Chapter 04: RESULTS
+# Chapter 3: RESULTS
 
 4.1	Discussion on the Results Achieved
 The forecasting model has successfully been able to predict the future values for the land temperature. We found that overall countries' data is stationary but when we analyzed the patterns of the country India, we found that the data was not stationary and hence needed to be made stationary before implementing the ARIMA model. 
